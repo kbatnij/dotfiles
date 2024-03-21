@@ -1,0 +1,4 @@
+--theme="Dracula"
+--italic-text=always
+# enable pager scrolling
+--pager="less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse"

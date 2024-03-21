@@ -9,6 +9,7 @@ alias .='echo $PWD'
 alias ..='cd ..'
 alias ...='cd ...'
 alias tree='lsd --tree'
+alias cat='batcat'
 alias nuke='rm -rf'
 alias aliasconfig='micro $HOME/src/personal/dotfiles/mint-linux-setup/custom.aliases.sh'
 

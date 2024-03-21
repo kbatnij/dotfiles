@@ -42,7 +42,6 @@ install_dracula_theme() {
     wget $theme_url -O $temp_zip \
         && unzip $temp_zip -d $temp_dir \
         && cp $temp_dir/kitty-master/dracula.conf $temp_dir/kitty-master/diff.conf ~/.config/kitty/ \
-        && echo "include dracula.conf" >> ~/.config/kitty/kitty.conf \
         || { echo "Failed to install Dracula theme."; exit 1; }
 
     rm -rf $temp_zip $temp_dir

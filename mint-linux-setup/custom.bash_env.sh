@@ -30,3 +30,8 @@ if [ -f "$CUSTOM_FUNCTIONS_AS_ALIASES" ]; then
 else
     echo "Custom aliases file not found: $CUSTOM_FUNCTIONS_AS_ALIASES"
 fi
+
+# bat
+export BAT_THEME="Dracula"
+export BAT_STYLE="numbers,grid"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
