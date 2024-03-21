@@ -1,0 +1,14 @@
+classic: false
+icons:
+  when: auto
+  theme: fancy
+color:
+  when: auto
+  theme: default
+dereference: false # show full path of symlink
+symlink-arrow: ⇒
+date: date
+size: default
+permission: rwx
+total-size: true #total size of dirs
+hyperlink: auto
