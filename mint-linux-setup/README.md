@@ -1,12 +1,14 @@
 # Dotfile for Mint Linux
 
 ## Auto install
-* Starship prompt
-* Rust + Cargo
+* Git
+* Fonts
 * LSD
 * Kitty terminal
 * Micro
 * Aliases
+* Terraform
+* And more! Check the `setup.sh` script for full list.
 
 ## How to install
 
