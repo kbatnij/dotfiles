@@ -40,3 +40,7 @@ function updateall () {
 
     echo "All updates complete!"
 }
+
+bgdiff() {
+    git diff --name-only --relative --diff-filter=d | xargs bat --diff
+}

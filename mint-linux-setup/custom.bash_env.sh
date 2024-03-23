@@ -35,3 +35,8 @@ fi
 export BAT_THEME="Dracula"
 export BAT_STYLE="numbers,grid"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# go
+# Modern go uses `go env GOPATH` and `go env GOROOT` to find the folders. I'm setting GOPATH here explicitly just cuz
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
