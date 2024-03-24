@@ -2,7 +2,7 @@
 
 # Install Micro if not already installed
 MICRO_VERSION="2.0.13"
-MICRO_ARCH="amd64" # Change to arm64 if you're on an ARM system
+MICRO_ARCH="amd64"
 echo "Checking Micro installation..."
 if ! command -v micro &> /dev/null; then
     echo "Downloading and installing Micro ${MICRO_VERSION}..."
