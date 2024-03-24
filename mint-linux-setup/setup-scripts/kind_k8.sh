@@ -2,22 +2,13 @@
 
 KIND_VERSION=v0.22.0
 
-# Check if Go is installed
-if ! command -v go &> /dev/null; then
-    echo "Go is not installed. Setting up Go..."
-    ./go_lang.sh
-fi
-
-# Now check if Go is properly installed before proceeding
-if ! command -v go &> /dev/null; then
-    echo "Installation of Go failed or Go is not set up correctly in PATH. Cannot proceed with kind installation."
-    exit 1
-fi
-
-# Check if kind is installed and install if doesnt exist
 if ! command -v kind &> /dev/null; then
-    echo "Installing kind ${KIND_VERSION}..."
-    go install sigs.k8s.io/kind@${KIND_VERSION}
+    # For AMD64 / x86_64
+    [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/${KIND_VERSION}/kind-linux-amd64
+    # For ARM64
+    [ $(uname -m) = aarch64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/${KIND_VERSION}/kind-linux-arm64
+    chmod +x ./kind
+    sudo mv ./kind /usr/local/bin/kind
 fi
 
 echo "kind installed successfully."
