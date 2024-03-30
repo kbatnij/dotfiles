@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 function updateall () {
+    echo "Updating system packages..."
+    sudo apt update && sudo apt full-upgrade
+    
+    echo "Cleaning up APT cache..."
+    sudo apt clean
+    
     echo "Updating Rust tools..."
     if command -v rustup &> /dev/null; then
         rustup update
@@ -15,11 +21,8 @@ function updateall () {
         echo "Cargo is not installed."
     fi
 
-    echo "Updating system packages..."
-    sudo apt update && sudo apt upgrade -y
-
     echo "Updating Flatpaks..."
-    flatpak update
+    flatpak update -y
 
     echo "Removing unused system packages..."
     sudo apt autoremove -y

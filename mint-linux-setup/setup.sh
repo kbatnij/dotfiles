@@ -57,6 +57,12 @@ sudo apt update && sudo apt upgrade -y
 # Install openlens
 ./setup-scripts/openlens.sh
 
+# Install jEnv
+./setup-scripts/jenv.sh
+
+# Install jdk
+./setup-scripts/jdks.sh
+
 # Add custom.bash_env.sh configs to bashrc
 CUSTOM_ENV_PATH="$(dirname "$(realpath "$0")")/custom.bash_env.sh"
 if ! grep -qxF "source \"$CUSTOM_ENV_PATH\"" "$HOME/.bashrc"; then

@@ -40,3 +40,10 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Modern go uses `go env GOPATH` and `go env GOROOT` to find the folders. I'm setting GOPATH here explicitly just cuz
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# jEnv
+export PATH=$PATH:$HOME/.jenv/bin
+eval "$(jenv init -)" &> /dev/null
+jenv enable-plugin export &> /dev/null
+
+
